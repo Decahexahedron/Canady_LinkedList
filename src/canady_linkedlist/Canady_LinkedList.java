@@ -36,6 +36,7 @@ public class Canady_LinkedList {
         System.out.println("What is the species of the new element?");
         Thread.sleep(200);
         input2 = sc.nextLine();
+        input2 = sc.nextLine();
         newitem.setSpec(input2);
         Thread.sleep(400);
         System.out.println("What is the ability of the new element?");
