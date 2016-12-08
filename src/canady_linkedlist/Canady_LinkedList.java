@@ -12,28 +12,39 @@ public class Canady_LinkedList {
     static Element first = e1;
     static Element last = e5;
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
+        add();
         listt();
     }
 
-    static void add(Element e) {
+    static void add() throws InterruptedException {
         Scanner sc = new Scanner(System.in);
         int input1;
         String input2;
         Element newitem;
         newitem = new Element(null, 0, "", "", "");
         System.out.println("What is the new element's name?");
+        Thread.sleep(200);
         input2 = sc.nextLine();
         newitem.setName(input2);
+        Thread.sleep(400);
         System.out.println("What is the power level of the new element?");
+        Thread.sleep(200);
         input1 = sc.nextInt();
         newitem.setPower(input1);
+        Thread.sleep(400);
         System.out.println("What is the species of the new element?");
+        Thread.sleep(200);
         input2 = sc.nextLine();
         newitem.setSpec(input2);
+        Thread.sleep(400);
         System.out.println("What is the ability of the new element?");
+        Thread.sleep(200);
         input2 = sc.nextLine();
         newitem.setAbility(input2);
+        Thread.sleep(400);
+        newitem.setTail(first);
+        first = newitem;
     }
 
     static void del(int e) {
