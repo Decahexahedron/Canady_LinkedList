@@ -4,13 +4,15 @@ import java.util.*;
 
 public class Canady_LinkedList {
 
-    static Element e5 = new Element(null, 0, "e5", "z", "g");
-    static Element e4 = new Element(e5, 1, "e4", "x", "f");
-    static Element e3 = new Element(e4, 2, "e3", "c", "d");
-    static Element e2 = new Element(e3, 3, "e2", "v", "s");
-    static Element e1 = new Element(e2, 4, "e1", "b", "a");
+    //these are the starting 5 elements, along with placeholders first and last.
+    static Element e5 = new Element(null, 2, "Fake Wizard", "Human", "Does Magic, Probably");
+    static Element e4 = new Element(e5, 100, "Scary Dragon", "Draconian", "Spits Fire and Kills Stuff");
+    static Element e3 = new Element(e4, 144, "Generic Superhero", "Superhuman", "Saves the World");
+    static Element e2 = new Element(e3, 64, "Generic Supervillain", "'Super'Human", "Threatens Safety of the World");
+    static Element e1 = new Element(e2, 36, "Monster", "Not Really Sure", "Eats People");
     static Element first = e1;
     static Element last = e5;
+    //these booleans are used to run the program (while loops, if statements)
     static boolean go = true;
     static boolean empty = false;
 
@@ -23,6 +25,8 @@ public class Canady_LinkedList {
         }
     }
 
+    //choice lets the user choose what to do (add, remove, quit)
+    //at the end it prints many lines to clear the output window
     public static void choice(boolean e) throws InterruptedException {
         listt(e);
         System.out.println("What do");
@@ -47,6 +51,8 @@ public class Canady_LinkedList {
         }
     }
 
+    //add gives the user input to create a new element.
+    //it also sets the 'empty' variable to false since the program had problems if it didn't.
     static void add() throws InterruptedException {
         Scanner sc = new Scanner(System.in);
         int input1;
@@ -79,6 +85,7 @@ public class Canady_LinkedList {
         empty = false;
     }
 
+    //the del method will remove the first item, as long as the list isn't empty
     static void del(boolean e) {
         if (e) {
             System.out.println("Your list is empty!");
@@ -90,6 +97,7 @@ public class Canady_LinkedList {
         }
     }
 
+    //the delEnd method removes the last element, as long as the list has more than 1 element
     static void delEnd(boolean e) {
         if (e) {
             System.out.println("Your list is empty!");
@@ -111,6 +119,7 @@ public class Canady_LinkedList {
         }
     }
 
+    //the listt method prints every element in the list and its properties
     static void listt(boolean e) {
         if (e) {
             System.out.println("Your list is empty!");
